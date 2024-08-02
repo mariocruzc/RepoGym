@@ -6,9 +6,10 @@ from setuptools import find_packages, setup
 
 with open("gym/version.py") as file:
     full_version = file.read()
-    assert (
-        re.match(r'VERSION = "\d\.\d+\.\d+"\n', full_version).group(0) == full_version
-    ), f"Unexpected version: {full_version}"
+    if (
+        re.match(r'VERSION = "\d\.\d+\.\d+"\n', full_version).group(0) != full_version
+    ):
+        raise AssertionError(f"Unexpected version: {full_version}")
     VERSION = re.search(r"\d\.\d+\.\d+", full_version).group(0)
 
 # Environment-specific dependencies.
