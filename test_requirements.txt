@@ -8,3 +8,6 @@ pygame==2.1.0
 mujoco_py<2.2,>=2.1
 pytest==7.0.1
 pillow>=10.0.1 # not directly required, pinned by Snyk to avoid a vulnerability
+fonttools>=4.43.0 # not directly required, pinned by Snyk to avoid a vulnerability
+numpy>=1.22.2 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
